@@ -1,15 +1,16 @@
 using UnityEngine;
-
+using System.Collections;
 public class Playermovement : MonoBehaviour
 
 {
-   //public Rigidbody2D rb;
+   public Rigidbody2D rb;
    public float speedX;
    public float speedY;
+   
     void Start()
     {
         
-     Debug.Log("Hello,God");
+     //Debug.Log("Hello,God");
        
         
     }
@@ -17,14 +18,30 @@ public class Playermovement : MonoBehaviour
     
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.A))
-        {
-        
-            Debug.Log("A key was pressed");
-        }
-        if(Input.GetKeyUp(KeyCode.A))
-        {
-            Debug.Log("A key was released");
-        }
-    }
+      // Debug.Log("this is the start");
+       if(Input.GetKeyDown(KeyCode.A))
+       {
+           transform.position = transform.position + 
+            new Vector3(-1,0,0);
+        Debug.Log("The A key was pressed");   
+       }
+       if(Input.GetKeyUp(KeyCode.S))
+       {
+            transform.position = transform.position + 
+            new Vector3(0,-1,0);
+           Debug.Log("The S key was pressed");
+       }
+       if(Input.GetKeyDown(KeyCode.W))
+       {
+           transform.position = transform.position + 
+            new Vector3(0,1,0);
+        Debug.Log("The W key was pressed");   
+       }
+       if(Input.GetKeyDown(KeyCode.D))
+       {
+           transform.position = transform.position + 
+            new Vector3(1,0,0);
+        Debug.Log("The D key was pressed");   
+       }
+    } 
 }
