@@ -25,7 +25,7 @@ public class Playermovement : MonoBehaviour
             new Vector3(-1,0,0);
         Debug.Log("The A key was pressed");   
        }
-       if(Input.GetKeyUp(KeyCode.S))
+       if(Input.GetKeyDown(KeyCode.S))
        {
             transform.position = transform.position + 
             new Vector3(0,-1,0);
@@ -37,7 +37,7 @@ public class Playermovement : MonoBehaviour
             new Vector3(0,1,0);
         Debug.Log("The W key was pressed");   
        }
-       if(Input.GetKeyDown(KeyCode.D))
+       if(Input.GetKeyUp(KeyCode.D))
        {
            transform.position = transform.position + 
             new Vector3(1,0,0);
