@@ -1,10 +1,11 @@
 using UnityEngine;
 using System.Collections;
-public class Playermovement1 : MonoBehaviour
+public class Playermovement : MonoBehaviour
 
 {
    public Rigidbody2D rb;
-   
+   public float speedX;
+   public float speedY;
    
     void Start()
     {
