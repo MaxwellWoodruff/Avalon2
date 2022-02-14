@@ -4,11 +4,12 @@ public class Playermovement : MonoBehaviour
 
 {
    public Rigidbody2D rb;
-   
+
    public float speed;
 
    public Animator animator;
    
+   public float moveHorizontal;
     void Start()
     {
     rb = GetComponent<Rigidbody2D>();
@@ -18,25 +19,26 @@ public class Playermovement : MonoBehaviour
     
     void Update()
     {
-       animator.SetFloat("speed", moveHorizontal*speed);
+        float moveHorizontal = Input.GetAxis("Horizontal");
+      float moveVertical = Input.GetAxis("Vertical");
+      rb.velocity = new Vector2 (moveHorizontal*speed, moveVertical*speed);
+       
+       animator.SetFloat("speed",Mathf.Abs (moveHorizontal*speed));
        if(Input.GetKeyDown(KeyCode.A))
        {
-        Debug.Log("The A key was pressed");   
+        Debug.Log("Running to right"); 
        }
        if(Input.GetKeyUp(KeyCode.S))
       {    
-          Debug.Log("The S key was pressed");
+          Debug.Log("Crouching");
       }
        if(Input.GetKeyDown(KeyCode.W))
        {  
-        Debug.Log("The W key was pressed");   
+        Debug.Log("Jumping");   
        }
        if(Input.GetKeyDown(KeyCode.D))
        {  
-        Debug.Log("The D key was pressed");   
+        Debug.Log("Righting to the left");   
        }
-      float moveHorizontal = Input.GetAxis("Horizontal");
-      float moveVertical = Input.GetAxis("Vertical");
-      rb.velocity = new Vector2 (moveHorizontal*speed, moveVertical*speed);
     }     
 }
