@@ -3,12 +3,11 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
-public float dumbass;
+public float coli;
 
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log("we hit");
     }
     
     
