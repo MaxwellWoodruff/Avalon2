@@ -13,11 +13,26 @@ public class PlayerAttack : MonoBehaviour
         {
             Attack();
         }
-        
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            Jumping();
+        if(Input.GetKeyDown(KeyCode.S))
+        {
+            crouch();
+        }  
     }
 
-    void Attack()
-    {
-      animator.SetTrigger("Attack");
+        void Attack()
+        {
+        animator.SetTrigger("Attack");
+        }
+        void Jumping()
+        {
+            animator.SetTrigger("Jumping");
+        }
+        void crouch()
+        {
+            animator.SetTrigger("crouch");
+        }
     }
 }
