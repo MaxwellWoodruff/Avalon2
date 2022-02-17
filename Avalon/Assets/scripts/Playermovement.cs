@@ -44,11 +44,11 @@ public class Playermovement : MonoBehaviour
        }
        if(Input.GetKeyUp(KeyCode.S))
       {    
-          Debug.Log("Crouching");
+       //   Debug.Log("Crouching");
       }
        if(Input.GetKeyDown(KeyCode.W))
        {  
-        Debug.Log("Jumping");   
+        //Debug.Log("Jumping");   
        }
        if(Input.GetKeyDown(KeyCode.D))
        {  

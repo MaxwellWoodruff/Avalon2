@@ -3,12 +3,13 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour
 {
+public Rigidbody2D rb;
 public float coli;
-
-
-    void OnCollisionEnter2D(Collision2D col)
-    {
-    }
-    
-    
+public Animator animator;
+public bool Grounded = true;
+ void Start()
+ {
+     rb = GetComponent<Rigidbody2D>();
+     animator= GetComponent<Animator>();
+ }
 }
