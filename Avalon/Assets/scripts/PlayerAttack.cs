@@ -14,14 +14,31 @@ public class PlayerAttack : MonoBehaviour
             Attack();
         }
 
-        if(Input.GetKeyDown(KeyCode.W))
+        //if(Input.GetKeyDown(KeyCode.W))
+        //{
+          //  Jumping();
+        //}
+
+        if(Input.GetKeyDown(KeyCode.S))
         {
-            Jumping();
+            animator.SetBool("Crouching",true);
+            Debug.Log("Crouching");
+        }
+        if(Input.GetKeyUp(KeyCode.S))
+        {
+            animator.SetBool("Crouching",false);
+            Debug.Log("Standing");
         }
 
-        if(Input.GetKeyDown(KeyCode.R))
+        if(Input.GetKeyDown(KeyCode.W))
         {
-            Crouch();
+            animator.SetTrigger("Jumping");
+            Debug.Log("In Air");
+        }
+        else
+        {
+            animator.SetBool("Jumping",false);
+            Debug.Log("On Ground");
         }
     }
 
@@ -29,22 +46,4 @@ public class PlayerAttack : MonoBehaviour
     {
     animator.SetTrigger("Attack");
     }
-
-    void Jumping()
-    {
-        animator.SetTrigger("Jumping");
-    }
-
-    void Crouch()
-    {
-        animator.SetTrigger("Crouch");
-    }
-    void OnCollisionEnter2D(Collision2D coli)
-    {
-        if (coli.gameObject.tag =="Ground")
-        {
-            animator.SetTrigger("Grounded");
-            Debug.Log("We hitting the ground");
-        }
-    } 
 }
