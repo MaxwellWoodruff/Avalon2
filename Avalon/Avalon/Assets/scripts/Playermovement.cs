@@ -23,7 +23,6 @@ public class Playermovement : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
       float moveVertical = Input.GetAxis("Vertical");
       rb.velocity = new Vector2 (moveHorizontal*speed, moveVertical*speed);
-<<<<<<< HEAD:Avalon/Assets/scripts/Playermovement.cs
         if(Input.GetKeyUp(KeyCode.E))
        {  
         Debug.Log("Attacking");
@@ -35,9 +34,7 @@ public class Playermovement : MonoBehaviour
         //Debug.Log("Crouch");
        //attackrecovery = 61;  
        //}
-=======
-       
->>>>>>> 42d1f181678ea5371e68193b002d3d2d066f2d8c:Avalon/Avalon/Assets/scripts/Playermovement.cs
+
        animator.SetFloat("speed",Mathf.Abs (moveHorizontal*speed));
        if(Input.GetKeyDown(KeyCode.A))
        {

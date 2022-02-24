@@ -240,15 +240,13 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-<<<<<<< HEAD:Avalon/Assets/Player1 animations/Player.controller
-=======
   - m_Name: Jumping
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
->>>>>>> 42d1f181678ea5371e68193b002d3d2d066f2d8c:Avalon/Avalon/Assets/Player1 animations/Player.controller
+animations/Player.controller
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Player1Layer
